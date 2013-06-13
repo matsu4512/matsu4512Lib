@@ -1,8 +1,20 @@
 package jp.matsu4512.color
 {
+	/**
+	 * ColorHSV
+	 * HSVカラーを扱うクラス
+	 * @author matsu4512
+	 */
 	public class ColorHSV
 	{
 		public var h:Number, s:Number, v:Number;
+		
+		/**
+		 * コンストラクタ
+		 * @param h 色相 0～360
+		 * @param s 色彩 0～1
+		 * @param v 明度 0～1
+		 */
 		public function ColorHSV(h:Number, s:Number, v:Number)
 		{
 			this.h = h;
@@ -10,6 +22,10 @@ package jp.matsu4512.color
 			this.v = v;
 		}
 		
+		/**
+		 * ColorRGBクラスに変換する
+		 * @return RGBカラー
+		 */
 		public function toRGB():ColorRGB{
 			var f:Number;
 			var i:int, p:int, q:int, t:int;
